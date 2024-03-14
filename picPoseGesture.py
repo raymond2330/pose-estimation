@@ -44,14 +44,13 @@ def detect_pose_landmarks(image_path):
     return annotated_image
 
 def main():
-    image_path = "samplePic.jpg"  # Replace with the path to your image
+    image_path = "samplePic.jpg"
     annotated_image = detect_pose_landmarks(image_path)
     
-    # Display the annotated image
     while True:
         cv2.imshow("Pose Landmarks", annotated_image)
         key = cv2.waitKey(1)
-        if key == 27:  # Esc key
+        if key == 27: 
             break
     
     cv2.destroyAllWindows()
